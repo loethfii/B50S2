@@ -9,4 +9,8 @@ export default new (class VotersController {
   VotePaslon(req: Request, res: Response) {
     return VoterService.VotePaslon(req, res);
   }
+
+  CountDataVoter(req: Request, res: Response) {
+    return VoterService.CountDataVoters(req, res);
+  }
 })();

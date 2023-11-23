@@ -8,4 +8,10 @@ routerVoters.get("/voters", Auth.AccessValidation, VoterController.FindAll);
 
 routerVoters.post("/vote", Auth.AccessValidation, VoterController.VotePaslon);
 
+routerVoters.get(
+  "/count",
+  Auth.AccessValidation,
+  VoterController.CountDataVoter
+);
+
 export default routerVoters;

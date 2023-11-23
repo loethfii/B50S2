@@ -4,6 +4,7 @@ import {
   PrimaryGeneratedColumn,
   OneToOne,
   JoinColumn,
+  OneToMany,
 } from "typeorm";
 import { User } from "./User";
 import { Paslon } from "./Paslon";
@@ -21,7 +22,6 @@ export class Voters {
 
   @Column()
   paslonId: number;
-  @OneToOne(() => Paslon)
-  @JoinColumn()
+  @OneToOne(() => Paslon, (paslon) => paslon.votersRel)
   paslon: Paslon;
 }

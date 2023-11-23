@@ -5,7 +5,6 @@ import { Repository } from "typeorm";
 import cloudinary from "../middleware/cloudinary";
 import { PaslonSchema } from "../utils/validators/validators";
 import { Partai } from "../entities/Partai";
-import { any } from "joi";
 
 export default new (class PaslonServices {
   private readonly paslonRepository: Repository<Paslon> =

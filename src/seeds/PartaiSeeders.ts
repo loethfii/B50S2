@@ -2,7 +2,7 @@ import { DataSource } from "typeorm";
 import { Seeder, SeederFactoryManager } from "typeorm-extension";
 import { Partai } from "../entities/Partai";
 
-export class PaslonSeeders implements Seeder {
+export class PartaiSeeders implements Seeder {
   async run(
     dataSource: DataSource,
     factoryManager: SeederFactoryManager
@@ -22,6 +22,14 @@ export class PaslonSeeders implements Seeder {
         ketua_umum: "Prabowo Subianto",
         visi_misi: "Menjadikan Manusia demokratis",
         alamat: "Senen Jakarta Pusat",
+        image:
+          "https://res.cloudinary.com/dp3rsk2xa/image/upload/v1700675829/neny5sigdq79rkttfgcr.png",
+      },
+      {
+        nama: "PKS",
+        ketua_umum: "Dr. HARU SUANDHARU, S.Si, M.Si",
+        visi_misi: "Menjadikan indonesia di didepan",
+        alamat: "Mampang Jakarta Selatan",
         image:
           "https://res.cloudinary.com/dp3rsk2xa/image/upload/v1700675829/neny5sigdq79rkttfgcr.png",
       },

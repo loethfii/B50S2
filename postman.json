@@ -16,7 +16,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoiam9rbzEyMyIsImlhdCI6MTcwMDcxNDg2NSwiZXhwIjoxNzAwNzE4NDY1fQ.EOdKfpjYwiTwhkJoo5ZaZf8z1SD9Y8eciB3SfSjTcSQ",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoiam9rbzEyMyIsImlhdCI6MTcwMDc2NDUwNCwiZXhwIjoxNzAwNzY4MTA0fQ.cKH1rpj5sYeFlpqMSyH7hG5c3rjJdjSegjFh1BI4SXM",
 								"type": "text"
 							}
 						],
@@ -97,7 +97,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoiam9rbzEyMyIsImlhdCI6MTcwMDcxNDg2NSwiZXhwIjoxNzAwNzE4NDY1fQ.EOdKfpjYwiTwhkJoo5ZaZf8z1SD9Y8eciB3SfSjTcSQ",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoiam9rbzEyMyIsImlhdCI6MTcwMDc2NTIzNSwiZXhwIjoxNzAwNzY4ODM1fQ.F0mFzaYt0L53h3GsIOLWUk5HABIfjCOjC4xrDTjzD5E",
 								"type": "text"
 							}
 						],
@@ -206,7 +206,13 @@
 					"name": "Get Pemilu News",
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoiam9rbzEyMyIsImlhdCI6MTcwMDc2NDUwNCwiZXhwIjoxNzAwNzY4MTA0fQ.cKH1rpj5sYeFlpqMSyH7hG5c3rjJdjSegjFh1BI4SXM",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "http://localhost:3000/api/v1/pemilu-news",
 							"protocol": "http",
@@ -373,7 +379,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"full_name\" : \"Joko Samudra\", \r\n    \"alamat\" : \"Jalan Kucing No 1\",\r\n    \"jenis_kelamin\" : \"Laki - Laki\",\r\n    \"username\" : \"joko123\",\r\n    \"password\" : \"joko123\"\r\n}",
+							"raw": "{\r\n    \"full_name\" : \"Juan\", \r\n    \"alamat\" : \"Jalan Semangka No 1\",\r\n    \"jenis_kelamin\" : \"Laki - Laki\",\r\n    \"username\" : \"juan\",\r\n    \"password\" : \"juan123\",\r\n    \"role\" : \"user\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -403,7 +409,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"username\" : \"joko123\",\r\n    \"password\" : \"joko123\"\r\n}",
+							"raw": "{\r\n    \"username\" : \"juan\",\r\n    \"password\" : \"juan123\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -441,7 +447,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoiam9rbzEyMyIsImlhdCI6MTcwMDcxNDg2NSwiZXhwIjoxNzAwNzE4NDY1fQ.EOdKfpjYwiTwhkJoo5ZaZf8z1SD9Y8eciB3SfSjTcSQ",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoiam9rbzEyMyIsImlhdCI6MTcwMDc2NDUwNCwiZXhwIjoxNzAwNzY4MTA0fQ.cKH1rpj5sYeFlpqMSyH7hG5c3rjJdjSegjFh1BI4SXM",
 								"type": "text"
 							}
 						],
@@ -619,11 +625,20 @@
 				{
 					"name": "Add Paslon Partai",
 					"request": {
+						"auth": {
+							"type": "noauth"
+						},
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoiam9rbzEyMyIsImlhdCI6MTcwMDc2NTIzNSwiZXhwIjoxNzAwNzY4ODM1fQ.F0mFzaYt0L53h3GsIOLWUk5HABIfjCOjC4xrDTjzD5E",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"paslonId\": 20,\r\n    \"partaiId\": 6\r\n}",
+							"raw": "{\r\n    \"paslonId\": 2,\r\n    \"partaiId\": 2\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -661,7 +676,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoiam9rbzEyMyIsImlhdCI6MTcwMDcxNDg2NSwiZXhwIjoxNzAwNzE4NDY1fQ.EOdKfpjYwiTwhkJoo5ZaZf8z1SD9Y8eciB3SfSjTcSQ",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjMsInVzZXJuYW1lIjoianVhbiIsImlhdCI6MTcwMDc2ODkyMSwiZXhwIjoxNzAwNzcyNTIxfQ.y8qACn8jBfPkCFP_DSC7OFo3wFwAnXRIfZkgehsZ7Pw",
 								"type": "text"
 							}
 						],
@@ -691,7 +706,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoiam9rbzEyMyIsImlhdCI6MTcwMDcxMzgyOCwiZXhwIjoxNzAwNzE3NDI4fQ.xuCphzEvL9mfXxhLHA5gqYhrb6hzB89LwNBjHmqgMEg",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjMsInVzZXJuYW1lIjoianVhbiIsImlhdCI6MTcwMDc2NzI2NiwiZXhwIjoxNzAwNzcwODY2fQ.fqwC4zq4S_kYV7ggsr3Jab2AzPuAfZsRxF-DOrbMHKs",
 								"type": "text"
 							}
 						],
@@ -715,6 +730,33 @@
 								"api",
 								"v1",
 								"vote"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Count Data voter",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjMsInVzZXJuYW1lIjoianVhbiIsImlhdCI6MTcwMDc2ODkyMSwiZXhwIjoxNzAwNzcyNTIxfQ.y8qACn8jBfPkCFP_DSC7OFo3wFwAnXRIfZkgehsZ7Pw",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/count",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"count"
 							]
 						}
 					},
