@@ -17,7 +17,7 @@ export class User {
   @Column({ length: 100 })
   username: string;
 
-  @Column({ length: 100 })
+  @Column({ length: 100, default: "user" })
   role: string;
 
   @Column({ length: 300 })

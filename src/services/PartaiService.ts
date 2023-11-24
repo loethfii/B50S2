@@ -99,12 +99,12 @@ export default new (class PartaiService {
       updatePartai.alamat = value.alamat;
       updatePartai.image = cloudinaryResponse;
 
-      const updatedData = await this.partaiRepository.update(id, updatePartai);
+      await this.partaiRepository.update(id, updatePartai);
 
       return res.status(200).json({
         status: 200,
-        message: "Success",
-        data: updatedData,
+        message: "success update",
+        data: updatePartai,
       });
     } catch (error) {
       return res.status(500).json(error);
@@ -114,11 +114,10 @@ export default new (class PartaiService {
   async Delete(req: Request, res: Response): Promise<Response> {
     try {
       const id = parseInt(req.params.id);
-      const deletedData = await this.partaiRepository.delete(id);
+      await this.partaiRepository.delete(id);
       return res.status(200).json({
         status: 200,
-        message: "Success",
-        data: deletedData,
+        message: "success delete",
       });
     } catch (error) {
       return res.status(500).json(error);
