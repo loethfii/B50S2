@@ -10,13 +10,74 @@
 			"name": "Paslon Copy",
 			"item": [
 				{
+					"name": "Find Paslon",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoicGFybWFuIiwiaWF0IjoxNzAwODQ0NDk0LCJleHAiOjE3MDA4NDgwOTR9.BblEe8aLeQJK0_CGVEJq8efzOvYS86nQGM9CF2teJjA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/paslon",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"paslon"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Detail Paslon",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsInVzZXJuYW1lIjoiam9ucyIsImlhdCI6MTcwMDgyMjA3MiwiZXhwIjoxNzAwODI1NjcyfQ.YCoCCl8-BES0SWJZq6vO1a19c863sCm-UPe91XzhMhk",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/paslon/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"paslon",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Add Paslon",
 					"request": {
 						"method": "POST",
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoiam9rbzEyMyIsImlhdCI6MTcwMDc2NDUwNCwiZXhwIjoxNzAwNzY4MTA0fQ.cKH1rpj5sYeFlpqMSyH7hG5c3rjJdjSegjFh1BI4SXM",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoicGFybWFuIiwiaWF0IjoxNzAwODQ0NDk0LCJleHAiOjE3MDA4NDgwOTR9.BblEe8aLeQJK0_CGVEJq8efzOvYS86nQGM9CF2teJjA",
 								"type": "text"
 							}
 						],
@@ -25,24 +86,24 @@
 							"formdata": [
 								{
 									"key": "nama",
-									"value": "Ganjar Pranowo",
+									"value": "Jono & Martin",
 									"type": "text"
 								},
 								{
 									"key": "nomor_urut",
-									"value": "2",
+									"value": "5",
 									"type": "text"
 								},
 								{
 									"key": "visi_misi",
-									"value": "Membantu rakyat miskin",
+									"value": "Menjadikan idn",
 									"type": "text"
 								},
 								{
 									"key": "image",
 									"contentType": "",
 									"type": "file",
-									"src": "save foto/simulasi aplikasi/depan.jpg"
+									"src": "save foto/simulasi aplikasi/Miles-Morales-1024x731.jpg"
 								}
 							]
 						},
@@ -88,82 +149,30 @@
 					"response": []
 				},
 				{
-					"name": "Find Paslon",
-					"request": {
-						"auth": {
-							"type": "noauth"
-						},
-						"method": "GET",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoiam9rbzEyMyIsImlhdCI6MTcwMDc2NTIzNSwiZXhwIjoxNzAwNzY4ODM1fQ.F0mFzaYt0L53h3GsIOLWUk5HABIfjCOjC4xrDTjzD5E",
-								"type": "text"
-							}
-						],
-						"url": {
-							"raw": "http://localhost:3000/api/v1/paslon",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"v1",
-								"paslon"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Detail Paslon",
-					"request": {
-						"auth": {
-							"type": "noauth"
-						},
-						"method": "GET",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoiam9rbzEyMyIsImlhdCI6MTcwMDcxMzgyOCwiZXhwIjoxNzAwNzE3NDI4fQ.xuCphzEvL9mfXxhLHA5gqYhrb6hzB89LwNBjHmqgMEg",
-								"type": "text"
-							}
-						],
-						"url": {
-							"raw": "http://localhost:3000/api/v1/paslon/1",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"v1",
-								"paslon",
-								"1"
-							]
-						}
-					},
-					"response": []
-				},
-				{
 					"name": "Update Paslon",
 					"request": {
+						"auth": {
+							"type": "noauth"
+						},
 						"method": "PUT",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsInVzZXJuYW1lIjoiam9ucyIsImlhdCI6MTcwMDgyMjA3MiwiZXhwIjoxNzAwODI1NjcyfQ.YCoCCl8-BES0SWJZq6vO1a19c863sCm-UPe91XzhMhk",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "formdata",
 							"formdata": [
 								{
 									"key": "nama",
-									"value": "Aji Mumpung D",
+									"value": "Firman & Agus",
 									"type": "text"
 								},
 								{
 									"key": "nomor_urut",
-									"value": "12",
+									"value": "299",
 									"type": "text"
 								},
 								{
@@ -180,7 +189,7 @@
 							]
 						},
 						"url": {
-							"raw": "http://localhost:3000/api/v1/paslon/update/15",
+							"raw": "http://localhost:3000/api/v1/paslon/update/4",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -191,7 +200,7 @@
 								"v1",
 								"paslon",
 								"update",
-								"15"
+								"4"
 							]
 						}
 					},
@@ -209,7 +218,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoiam9rbzEyMyIsImlhdCI6MTcwMDc2NDUwNCwiZXhwIjoxNzAwNzY4MTA0fQ.cKH1rpj5sYeFlpqMSyH7hG5c3rjJdjSegjFh1BI4SXM",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsInVzZXJuYW1lIjoiam9ucyIsImlhdCI6MTcwMDgxODMwMywiZXhwIjoxNzAwODIxOTAzfQ.r0AV5LRxncmWUw678kjudiwIpySNytm6Jr40-BYPkwg",
 								"type": "text"
 							}
 						],
@@ -233,9 +242,15 @@
 					"name": "Detail Pemilu News",
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsInVzZXJuYW1lIjoiam9ucyIsImlhdCI6MTcwMDgxODMwMywiZXhwIjoxNzAwODIxOTAzfQ.r0AV5LRxncmWUw678kjudiwIpySNytm6Jr40-BYPkwg",
+								"type": "text"
+							}
+						],
 						"url": {
-							"raw": "http://localhost:3000/api/v1/pemilu-news/details/4",
+							"raw": "http://localhost:3000/api/v1/pemilu-news/details/3",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -246,7 +261,7 @@
 								"v1",
 								"pemilu-news",
 								"details",
-								"4"
+								"3"
 							]
 						}
 					},
@@ -256,10 +271,16 @@
 					"name": "Add Pemilu News",
 					"request": {
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsInVzZXJuYW1lIjoiam9ucyIsImlhdCI6MTcwMDgxODMwMywiZXhwIjoxNzAwODIxOTAzfQ.r0AV5LRxncmWUw678kjudiwIpySNytm6Jr40-BYPkwg",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"title\": \"Makan DUlu BAPAKK KU!!!\",\r\n            \"author\": \"Super Admin\",\r\n            \"image\": \"https://images.unsplash.com/photo-1476158085676-e67f57ed9ed7?q=80&w=2344&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\",\r\n            \"description\": \"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\"\r\n}",
+							"raw": "{\r\n    \"title\": \"Pasangan calon dari Partai PDI yakin menang 1 putaran\",\r\n    \"author\": \"Super Admin\",\r\n    \"image\": \"https://images.unsplash.com/photo-1476158085676-e67f57ed9ed7?q=80&w=2344&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\",\r\n    \"description\": \"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -285,11 +306,20 @@
 				{
 					"name": "Update Pemilu News",
 					"request": {
+						"auth": {
+							"type": "noauth"
+						},
 						"method": "PUT",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsInVzZXJuYW1lIjoiam9ucyIsImlhdCI6MTcwMDgxODMwMywiZXhwIjoxNzAwODIxOTAzfQ.r0AV5LRxncmWUw678kjudiwIpySNytm6Jr40-BYPkwg",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n     \"title\": \"Makan DUlu Bapak KUUUUUU!!!\",\r\n            \"author\": \"Super Admin\",\r\n            \"image\": \"https://images.unsplash.com/photo-1476158085676-e67f57ed9ed7?q=80&w=2344&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\",\r\n            \"description\": \"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\"\r\n}",
+							"raw": "{\r\n    \"title\": \"Pasangan calon dari Partai PDI yakin menang 1 putaran Kaga BOONG\",\r\n    \"author\": \"Super Admin\",\r\n    \"image\": \"https://images.unsplash.com/photo-1476158085676-e67f57ed9ed7?q=80&w=2344&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\",\r\n    \"description\": \"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -317,8 +347,17 @@
 				{
 					"name": "Delete Pemilu News",
 					"request": {
+						"auth": {
+							"type": "noauth"
+						},
 						"method": "DELETE",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsInVzZXJuYW1lIjoiam9ucyIsImlhdCI6MTcwMDgxODMwMywiZXhwIjoxNzAwODIxOTAzfQ.r0AV5LRxncmWUw678kjudiwIpySNytm6Jr40-BYPkwg",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "raw",
 							"raw": "",
@@ -329,7 +368,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3000/api/v1/pemilu-news/delete/1",
+							"raw": "http://localhost:3000/api/v1/pemilu-news/delete/3",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -340,7 +379,7 @@
 								"v1",
 								"pemilu-news",
 								"delete",
-								"1"
+								"3"
 							]
 						}
 					},
@@ -353,9 +392,16 @@
 			"item": [
 				{
 					"name": "List User",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
 					"request": {
 						"method": "GET",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"url": {
 							"raw": "http://localhost:3000/api/v1/list-user",
 							"protocol": "http",
@@ -379,7 +425,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"full_name\" : \"Juan\", \r\n    \"alamat\" : \"Jalan Semangka No 1\",\r\n    \"jenis_kelamin\" : \"Laki - Laki\",\r\n    \"username\" : \"juan\",\r\n    \"password\" : \"juan123\",\r\n    \"role\" : \"user\"\r\n}",
+							"raw": "{\r\n    \"full_name\" : \"Gian Carlos\", \r\n    \"alamat\" : \"Jalan Semangka No 1\",\r\n    \"jenis_kelamin\" : \"Laki - Laki\",\r\n    \"username\" : \"gian\",\r\n    \"password\" : \"gian123\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -409,7 +455,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"username\" : \"juan\",\r\n    \"password\" : \"juan123\"\r\n}",
+							"raw": "{\r\n    \"username\" : \"parman\",\r\n    \"password\" : \"parman123\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -447,7 +493,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoiam9rbzEyMyIsImlhdCI6MTcwMDc2NDUwNCwiZXhwIjoxNzAwNzY4MTA0fQ.cKH1rpj5sYeFlpqMSyH7hG5c3rjJdjSegjFh1BI4SXM",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsInVzZXJuYW1lIjoiam9ucyIsImlhdCI6MTcwMDgyNjIyOSwiZXhwIjoxNzAwODI5ODI5fQ.1QK_J5HCD9FyfMBNQcPgk7XEqKBxIllaZTxjpFx_xIg",
 								"type": "text"
 							}
 						],
@@ -469,9 +515,22 @@
 				},
 				{
 					"name": "Detail Partai",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsInVzZXJuYW1lIjoiam9ucyIsImlhdCI6MTcwMDgyNjIyOSwiZXhwIjoxNzAwODI5ODI5fQ.1QK_J5HCD9FyfMBNQcPgk7XEqKBxIllaZTxjpFx_xIg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
 						"url": {
 							"raw": "http://localhost:3000/api/v1/partai/1",
 							"protocol": "http",
@@ -492,35 +551,44 @@
 				{
 					"name": "Add partai",
 					"request": {
+						"auth": {
+							"type": "noauth"
+						},
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsInVzZXJuYW1lIjoiam9ucyIsImlhdCI6MTcwMDgyNjIyOSwiZXhwIjoxNzAwODI5ODI5fQ.1QK_J5HCD9FyfMBNQcPgk7XEqKBxIllaZTxjpFx_xIg",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "formdata",
 							"formdata": [
 								{
 									"key": "nama",
-									"value": "Pdi Perjuangan",
+									"value": "Partai Mantul",
 									"type": "text"
 								},
 								{
 									"key": "ketua_umum",
-									"value": "Andra And The backbone",
+									"value": "Pras Didi",
 									"type": "text"
 								},
 								{
 									"key": "visi_misi",
-									"value": "Memerdekakan Hak Wibu",
+									"value": "Bensin akan murah",
 									"type": "text"
 								},
 								{
 									"key": "alamat",
-									"value": "Kemayoran Jakarta Pusat",
+									"value": "Salemba Jakarta Pusat",
 									"type": "text"
 								},
 								{
 									"key": "image",
 									"type": "file",
-									"src": "save foto/simulasi aplikasi/intro-1654372200.png"
+									"src": "/C:/Users/Luthfi/Downloads/Logo_of_the_Democratic_Party_(Indonesia).png"
 								}
 							]
 						},
@@ -542,21 +610,27 @@
 					"response": []
 				},
 				{
-					"name": "Add partai Copy",
+					"name": "Update Partai",
 					"request": {
 						"method": "PUT",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsInVzZXJuYW1lIjoiam9ucyIsImlhdCI6MTcwMDgyNjIyOSwiZXhwIjoxNzAwODI5ODI5fQ.1QK_J5HCD9FyfMBNQcPgk7XEqKBxIllaZTxjpFx_xIg",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "formdata",
 							"formdata": [
 								{
 									"key": "nama",
-									"value": "PDI Perjuangan",
+									"value": "Demokrat",
 									"type": "text"
 								},
 								{
 									"key": "ketua_umum",
-									"value": "Surya Pangestu",
+									"value": "Agus Bambang Pacul",
 									"type": "text"
 								},
 								{
@@ -572,12 +646,12 @@
 								{
 									"key": "image",
 									"type": "file",
-									"src": "save foto/simulasi aplikasi/foto almet crop.jpg"
+									"src": "Screenshots/Screenshot 2023-04-02 134923.png"
 								}
 							]
 						},
 						"url": {
-							"raw": "http://localhost:3000/api/v1/partai/update/2",
+							"raw": "http://localhost:3000/api/v1/partai/update/4",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -588,7 +662,7 @@
 								"v1",
 								"partai",
 								"update",
-								"2"
+								"4"
 							]
 						}
 					},
@@ -598,9 +672,15 @@
 					"name": "Add partai Copy 2",
 					"request": {
 						"method": "DELETE",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsInVzZXJuYW1lIjoiam9ucyIsImlhdCI6MTcwMDgyNjIyOSwiZXhwIjoxNzAwODI5ODI5fQ.1QK_J5HCD9FyfMBNQcPgk7XEqKBxIllaZTxjpFx_xIg",
+								"type": "text"
+							}
+						],
 						"url": {
-							"raw": "http://localhost:3000/api/v1/partai/delete/1",
+							"raw": "http://localhost:3000/api/v1/partai/delete/5",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -611,7 +691,7 @@
 								"v1",
 								"partai",
 								"delete",
-								"1"
+								"5"
 							]
 						}
 					},
@@ -632,13 +712,13 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoiam9rbzEyMyIsImlhdCI6MTcwMDc2NTIzNSwiZXhwIjoxNzAwNzY4ODM1fQ.F0mFzaYt0L53h3GsIOLWUk5HABIfjCOjC4xrDTjzD5E",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsInVzZXJuYW1lIjoiam9ucyIsImlhdCI6MTcwMDgyMjA3MiwiZXhwIjoxNzAwODI1NjcyfQ.YCoCCl8-BES0SWJZq6vO1a19c863sCm-UPe91XzhMhk",
 								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"paslonId\": 2,\r\n    \"partaiId\": 2\r\n}",
+							"raw": "{\r\n    \"paslonId\": 2,\r\n    \"partaiId\": 4\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -676,7 +756,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjMsInVzZXJuYW1lIjoianVhbiIsImlhdCI6MTcwMDc2ODkyMSwiZXhwIjoxNzAwNzcyNTIxfQ.y8qACn8jBfPkCFP_DSC7OFo3wFwAnXRIfZkgehsZ7Pw",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjYsInVzZXJuYW1lIjoiZ2lhbiIsImlhdCI6MTcwMDgzODgwMiwiZXhwIjoxNzAwODQyNDAyfQ.ipkuyjxlho-nQisGHpQWmzKS-SbJaw__Em3PupEVmaI",
 								"type": "text"
 							}
 						],
@@ -706,7 +786,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjMsInVzZXJuYW1lIjoianVhbiIsImlhdCI6MTcwMDc2NzI2NiwiZXhwIjoxNzAwNzcwODY2fQ.fqwC4zq4S_kYV7ggsr3Jab2AzPuAfZsRxF-DOrbMHKs",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoicGFybWFuIiwiaWF0IjoxNzAwODQ0NDk0LCJleHAiOjE3MDA4NDgwOTR9.BblEe8aLeQJK0_CGVEJq8efzOvYS86nQGM9CF2teJjA",
 								"type": "text"
 							}
 						],
@@ -737,15 +817,22 @@
 				},
 				{
 					"name": "Count Data voter",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
 					"request": {
 						"method": "GET",
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjMsInVzZXJuYW1lIjoianVhbiIsImlhdCI6MTcwMDc2ODkyMSwiZXhwIjoxNzAwNzcyNTIxfQ.y8qACn8jBfPkCFP_DSC7OFo3wFwAnXRIfZkgehsZ7Pw",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoicGFybWFuIiwiaWF0IjoxNzAwODM5MDY2LCJleHAiOjE3MDA4NDI2NjZ9.D_FGpip7IyyZEbw-WkwBiTfozuAHOUSiGSDyHNsT-R0",
 								"type": "text"
 							}
 						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
 						"url": {
 							"raw": "http://localhost:3000/api/v1/count",
 							"protocol": "http",

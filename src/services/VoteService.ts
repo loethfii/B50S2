@@ -22,27 +22,19 @@ export default new (class VoterService {
         relations: ["user", "paslon"],
       });
 
-      const listVoterPromises = listVoter.map(async (voter) => {
-        const paslonObj = await this.paslonRepository.findOne({
-          where: {
-            id: voter.paslonId,
-          },
-        });
-
+      const listVoterPromises = listVoter.map((voter) => {
         return {
           nama: voter.user.full_name,
           alamat: voter.user.alamat,
           jenis_kelamin: voter.user.jenis_kelamin,
-          paslon_name: paslonObj.nama,
+          paslon_name: voter.paslon.nama,
+          no_urut: voter.paslon.nomor_urut,
         };
       });
-
-      const votersData = await Promise.all(listVoterPromises);
-
       return res.status(200).json({
         status: 200,
         message: `Success Get data`,
-        data: votersData,
+        data: listVoterPromises,
       });
     } catch (error) {
       return res.status(500).json({
@@ -54,9 +46,11 @@ export default new (class VoterService {
   async VotePaslon(req: Request, res: Response) {
     try {
       const tokenHeader = req.headers;
+      console.log("Ini Token : ", tokenHeader.authorization);
       const jwtDecode = tokenHeader.authorization.startsWith("Bearer ")
         ? auth.decodeWithoutBarier(tokenHeader.authorization)
         : jwt.decode(tokenHeader.authorization);
+      console.log("Ini adalah Hasil Decode", jwtDecode);
 
       const dataVote = req.body;
 

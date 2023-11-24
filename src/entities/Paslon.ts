@@ -4,6 +4,7 @@ import {
   Column,
   OneToMany,
   ManyToOne,
+  OneToOne,
 } from "typeorm";
 import { PaslonPartai } from "./paslon_partai";
 import { Voters } from "./Voters";
@@ -28,8 +29,8 @@ export class Paslon {
   @OneToMany(() => PaslonPartai, (paslon_partai) => paslon_partai.paslon)
   paslonsRel: PaslonPartai[];
 
-  @ManyToOne(() => Voters, (voters) => voters.paslon)
-  votersRel: Voters[];
+  @OneToOne(() => Voters, (voters) => voters.paslon)
+  votersRel: Voters;
 
   @Column({ nullable: false, default: () => "CURRENT_TIMESTAMP" })
   created_at: Date;

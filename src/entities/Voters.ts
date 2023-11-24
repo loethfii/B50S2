@@ -5,6 +5,7 @@ import {
   OneToOne,
   JoinColumn,
   OneToMany,
+  ManyToOne,
 } from "typeorm";
 import { User } from "./User";
 import { Paslon } from "./Paslon";
@@ -22,6 +23,6 @@ export class Voters {
 
   @Column()
   paslonId: number;
-  @OneToOne(() => Paslon, (paslon) => paslon.votersRel)
+  @ManyToOne(() => Paslon, (paslon) => paslon.votersRel)
   paslon: Paslon;
 }
