@@ -46,11 +46,9 @@ export default new (class VoterService {
   async VotePaslon(req: Request, res: Response) {
     try {
       const tokenHeader = req.headers;
-      console.log("Ini Token : ", tokenHeader.authorization);
       const jwtDecode = tokenHeader.authorization.startsWith("Bearer ")
         ? auth.decodeWithoutBarier(tokenHeader.authorization)
         : jwt.decode(tokenHeader.authorization);
-      console.log("Ini adalah Hasil Decode", jwtDecode);
 
       const dataVote = req.body;
 
@@ -79,14 +77,23 @@ export default new (class VoterService {
       const allDataVoters = await this.paslonRepository.find();
 
       const countVoterPromises = allDataVoters.map(async (paslon) => {
+        const totPemilih = await this.votersRepository.count();
+        const totPilihan = await this.votersRepository.count({
+          where: {
+            paslonId: paslon.id,
+          },
+        });
+
+        const presentase = Math.round((totPilihan / totPemilih) * 100);
         return {
           nomer_urut: paslon.nomor_urut,
           paslon_name: paslon.nama,
-          Pemilih: await this.votersRepository.count({
+          jml_pemilih: await this.votersRepository.count({
             where: {
               paslonId: paslon.id,
             },
           }),
+          presentase: `${presentase}%`,
         };
       });
 
